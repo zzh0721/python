@@ -1,0 +1,18 @@
+###求素数###
+def is_prime(x):
+    if x < 2:
+        return False
+    else:
+        for n in range(2, x-1):
+            if x % n == 0:
+                return False
+        return True
+        
+        
+###转置文本###
+def reverse(text):
+  word = ""
+  l = len(text) - 1
+  while l > 0:
+    word = word + text[l]
+    l -= 1
