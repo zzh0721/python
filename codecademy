@@ -16,3 +16,30 @@ def reverse(text):
   while l > 0:
     word = word + text[l]
     l -= 1
+
+
+###去掉元音字母###
+def anti_vowel(text):
+  c = ""
+  for i in text:
+    for j in "aeiouAEIOU":
+      if i == j:
+        i = ""
+    c += i
+  return c
+  
+  
+###制定字符替换为*###
+# 不懂
+def censor(text, word):
+    words = text.split()
+    result = ''
+    stars = '*' * len(word)
+    count = 0
+    for i in words:
+        if i == word:
+            words[count] = stars
+        count += 1
+    result =' '.join(words)
+
+    return result
