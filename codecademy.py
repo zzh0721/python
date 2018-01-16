@@ -66,7 +66,7 @@ for i in range(5):
     else:            # else2  
         continue  
     break            # break2  
-
+"""
 方法3解释：
 （1）break能跳出某一重循环（该重循环的本次及剩余次数都不再执行），但并不能跳出该重循环的其他外重循环。
 
@@ -81,3 +81,4 @@ for i in range(5):
 被终止，则else2被跳过，执行break2，导致第1重循环被终止。
 
 最终实现跳出整个循环。
+"""
