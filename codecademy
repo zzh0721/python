@@ -43,3 +43,41 @@ def censor(text, word):
     result =' '.join(words)
 
     return result
+
+
+###
+# -*- coding:utf-8 -*-  
+  
+""" 
+功能：python跳出循环 
+"""  
+# 方法2：for...else...用法，用于跳出指定循环层  
+  
+for i in range(5):  
+    for j in range(5):  
+        for k in range(5):  
+            if i == j == k == 3:  
+                break  
+            else:      
+                print i, '----', j, '----', k  
+        else:        # else1  
+            continue  
+        break        # break1  
+    else:            # else2  
+        continue  
+    break            # break2  
+
+方法3解释：
+（1）break能跳出某一重循环（该重循环的本次及剩余次数都不再执行），但并不能跳出该重循环的其他外重循环。
+
+例如，最内第3重循环break之后，程序返回第2重循环继续执行第2重的下一次，然后第3重循环将再次执行。
+
+（2）continue是跳过某一重循环的某一次，但该重循环的剩余次数会继续执行。
+
+（3）for...else：其中else块中的语句将在for循环完整执行过之后才会被执行，如果for循环被break，则else块将不会被执行。
+
+（4）方法3中，当第3重循环满足i == j == k ==3时，第3重循环被break，则并列的else1将跳过，执行break1，导致第2重循环
+
+被终止，则else2被跳过，执行break2，导致第1重循环被终止。
+
+最终实现跳出整个循环。
