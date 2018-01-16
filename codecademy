@@ -1,4 +1,4 @@
-###求素数###
+# 求素数
 def is_prime(x):
     if x < 2:
         return False
@@ -9,7 +9,7 @@ def is_prime(x):
         return True
         
         
-###转置文本###
+# 转置文本
 def reverse(text):
   word = ""
   l = len(text) - 1
@@ -18,7 +18,7 @@ def reverse(text):
     l -= 1
 
 
-###去掉元音字母###
+# 去掉元音字母
 def anti_vowel(text):
   c = ""
   for i in text:
@@ -29,7 +29,7 @@ def anti_vowel(text):
   return c
   
   
-###制定字符替换为*###
+# 制定字符替换为*
 # 不懂
 def censor(text, word):
     words = text.split()
@@ -45,7 +45,7 @@ def censor(text, word):
     return result
 
 
-###
+
 # -*- coding:utf-8 -*-  
   
 """ 
